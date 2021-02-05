@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 import numpy as np
 from win10toast import ToastNotifier
 import os
+import time
 
 # coins
 
@@ -17,6 +18,10 @@ coins = np.array([[True, "Stellar", "https://www.coindesk.com/price/stellar", 0.
 
 filepath = os.path.dirname(os.path.realpath(__file__))
 icons_path = filepath + "/crypto_icons/"
+
+# parameters
+
+notification_length = 5
 
 class Coin():
 
@@ -38,7 +43,9 @@ for coin in coins:
       coin.get_price()
       notification = ToastNotifier()
       if (coin.price < coin.low_price):
-          notification.show_toast(coin.name, coin.name + " has fallen below $" + str(coin.low_price), duration=20, icon_path=icons_path + coin.name + ".ico", threaded = True)
+          notification.show_toast(coin.name, coin.name + " has fallen below $" + str(coin.low_price), duration=notification_length, icon_path=icons_path + coin.name + ".ico", threaded = True)
+          time.sleep(notification_length)
       if (coin.price > coin.high_price):
-          notification.show_toast(coin.name, coin.name + " has risen above $" + str(coin.high_price), duration=20, icon_path=icons_path + coin.name + ".ico", threaded = True)
+          notification.show_toast(coin.name, coin.name + " has risen above $" + str(coin.high_price), duration=notification_length, icon_path=icons_path + coin.name + ".ico", threaded = True)
+          time.sleep(notification_length)
 
