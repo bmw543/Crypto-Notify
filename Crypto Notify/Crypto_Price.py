@@ -12,6 +12,8 @@ coins = np.array([["Stellar", "https://www.coindesk.com/price/stellar", 0.30, 0.
                   ["Bitcoin", "https://www.coindesk.com/price/bitcoin", 34000, 39000],
                   ["Litecoin", "https://www.coindesk.com/price/litecoin", 140, 160]])
 
+# paths
+
 filepath = os.path.dirname(os.path.realpath(__file__))
 icons_path = filepath + "/crypto_icons/"
 
