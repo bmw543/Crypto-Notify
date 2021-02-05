@@ -1,4 +1,4 @@
-This python program web scrapes prices for specified cryptocurrencies, and sends desktop notifications when a price moves above or below a threshold.
+This python program scrapes prices for specified cryptocurrencies from coindesk.com, and sends desktop notifications when a price moves above or below a threshold.
 
 Python dependencies:
 
