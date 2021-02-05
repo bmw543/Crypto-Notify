@@ -11,7 +11,7 @@ coins = np.array([[True, "Stellar", "https://www.coindesk.com/price/stellar", 0.
                   [True, "Bitcoin Cash", "https://www.coindesk.com/price/bitcoin-cash", 400, 480],
                   [True, "Bitcoin", "https://www.coindesk.com/price/bitcoin", 34000, 39000],
                   [True, "Litecoin", "https://www.coindesk.com/price/litecoin", 140, 160],
-                  [True, "Dogecoin", "https://www.coindesk.com/price/dogecoin", 0.03, 0.08])
+                  [True, "Dogecoin", "https://www.coindesk.com/price/dogecoin", 0.03, 0.08]])
 
 # paths
 
